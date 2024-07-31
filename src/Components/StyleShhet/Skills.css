@@ -1,0 +1,126 @@
+/* Styles for the skills section */
+.skills-section {
+    padding: 50px 20px;
+    background-color: inherit;
+    color: inherit;
+  }
+  
+  /* Title styles */
+  .skills-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-size: 40px;
+  }
+  
+  /* Container for the skills content */
+  .skills-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  /* Column layout for skills */
+  .skills-columns {
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
+  }
+  
+  .skills-column {
+    flex: 1;
+    padding: 10px;
+    min-width: 300px; /* Ensures each column doesn't get too small */
+  }
+  
+  /* Individual skill styling */
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill span {
+    font-size: 18px;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Progress bar and progress styles */
+  .progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #00bfff;
+    border-radius: 5px;
+  }
+  
+  /* Percentage text styling */
+  .percentage {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+  
+  /* Styles for the image */
+  .skills-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .skills-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .skills-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-columns {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .skills-column {
+      width: 100%;
+      max-width: 600px; /* Ensure columns don't stretch too wide */
+    }
+  
+    .skills-image {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-title {
+      font-size: 1.5em;
+    }
+  
+    .skill span {
+      font-size: 16px;
+    }
+  
+    .percentage {
+      font-size: 0.8em;
+    }
+  }
+  

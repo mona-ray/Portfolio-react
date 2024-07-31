@@ -1,0 +1,33 @@
+.titleStyle{
+    font-size: 50px;
+}
+.paraStyle{
+    font-size: 20px;
+    padding-top: -40px;
+  
+}
+.iconLink{
+    
+     font-size: 30px;
+     padding-bottom: 250px;
+}
+.iconLink i{
+    padding: 10px;
+}
+/* Base styles for icons */
+.icon {
+    font-size: 1.5rem; /* Adjust size as needed */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    margin: 0 10px; /* Spacing between icons */
+  }
+  
+  /* Dark mode icon styles */
+  .dark-icon {
+    color: #fff; /* White color for dark mode */
+  }
+  
+  /* Light mode icon styles */
+  .light-icon {
+    color: #000; /* Black color for light mode */
+  }
+  

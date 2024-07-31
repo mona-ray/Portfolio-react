@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Base styles for app container */
+.app-container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+ 
+}
+
+/* Dark mode styles */
+.app-container.dark {
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text color */
+}
+
+.app-container.dark .main-content {
+  background-color: #333; /* Dark background for content */
+  color: #fff; /* Light text color for content */
+}
+
+/* Light mode styles */
+.app-container.light {
+  background-color: #fff; /* Light background */
+  color: #000; /* Dark text color */
+}
+
+.app-container.light .main-content {
+  background-color: #fff; /* Light background for content */
+  color: #000; /* Dark text color for content */
+}
+.app-container.light .icon{
+  background-color: #fff; /* Light background for content */
+  color: #000; /* Dark text color for content */
+
+}
+
+.app-container.dark .icon{
+  background-color: #333; /* Dark background for content */
+  color: #fff; /* Light text color for content */
+}
+/* Base styles for navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 60px; /* Height of the navbar */
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end; /* Align items to the right */
+  padding: 0 1rem; /* Add padding to the right */
+  z-index: 1000; /* Make sure it’s above other content */
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Dark mode styles for navbar */
+.navbar.dark {
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Light mode styles for navbar */
+.navbar.light {
+  background-color: #fff; /* Light background */
+  color: #000; /* Dark text color */
+}
+
+/* Style for hamburger menu */
+.hamburger {
+  display: none;
+  
+}
+
+/* Style for theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+
+/* Style for nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: inherit; /* Inherit text color from navbar */
+  text-decoration: none;
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 1rem; /* Add space to the right of the hamburger icon */
   }
-  to {
-    transform: rotate(360deg);
+  .nav-links {
+    position: fixed;
+    top: 60px; /* Adjust based on navbar height */
+    right: 0;
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    width: 100%;
+    flex-direction: column;
+    background-color: inherit; /* Inherit background color from navbar */
+    justify-content: center;
+    align-items: center;
+    display: none; /* Hidden by default */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show when menu is open */
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
   }
 }

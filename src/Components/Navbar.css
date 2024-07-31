@@ -1,0 +1,40 @@
+/* Base styles for nav links */
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links.open {
+  display: flex; /* Ensure it displays when open */
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px; /* Adjust based on navbar height */
+    right: 0;
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    width: 100%;
+    flex-direction: column;
+    background-color: inherit; /* Inherit background color from navbar */
+    justify-content: center;
+    align-items: center;
+    display: none; /* Hidden by default */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show when menu is open */
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+}

@@ -1,0 +1,64 @@
+/* Base styles for the projects section */
+.projects-section {
+    padding: 20px;
+  }
+  
+  .projects-title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+  }
+  
+  .project-links {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .project-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--link-color);
+  }
+  
+  /* Dark mode styles */
+  .dark-mode {
+    --card-bg: #1e1e1e;
+    --card-text: #ffffff;
+    --card-border: #333333;
+    --link-color: #1e1e1e;
+  }
+  
+  /* Light mode styles */
+  .light-mode {
+    --card-bg: #ffffff;
+    --card-text: #343a40;
+    --card-border: #dddddd;
+    --link-color: #1e1e1e;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-card {
+      width: calc(100% - 40px);
+    }
+  }
+  
